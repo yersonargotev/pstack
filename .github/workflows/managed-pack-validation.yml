@@ -1,0 +1,18 @@
+name: Managed Pack validation
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions: {}
+
+jobs:
+  validate:
+    name: Validate pstack Managed Pack
+    uses: yersonargotev/packy/.github/workflows/managed-pack-validation.yml@407c9a7bd6d085af12f88b71ebfa2b9479e48021
+    with:
+      packy_ref: 407c9a7bd6d085af12f88b71ebfa2b9479e48021
+    permissions:
+      contents: read
